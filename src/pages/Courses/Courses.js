@@ -1,30 +1,24 @@
+import "./Courses.scss";
 import React from "react";
 import Grid from "../../components/Grid/Grid";
-import Header from "../../components/Header/Header";
 import Landing from "../../components/Landing/Landing";
 import Main from "../../components/Main/Main";
+import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
 import LectureImg1 from "../../assets/images/lecture-1.jpg";
 import LectureImg2 from "../../assets/images/lecture-2.jpg";
 import LectureImg3 from "../../assets/images/lecture-3.jpg";
 import LectureImg4 from "../../assets/images/lecture-4.jpg";
+import LectureImg5 from "../../assets/images/lecture-5.jpg";
+import LectureImg6 from "../../assets/images/lecture-6.jpg";
 import CourseCard from "../../components/CourseCard/CourseCard";
-import Testimonial from "../../components/Testimonial/Testimonal";
 
-const Home = () => {
+const Courses = () => {
   return (
     <>
       <Header />
       <Main>
-        <section>
-          <Landing />
-        </section>
-
-        <Section
-          title={"Open new possibilites"}
-          actionText={"Learn Something New"}
-          buttonText={"More Courses"}
-        >
+        <Section title={"All Lectures"} actionText={"Learn Something New"}>
           <Grid>
             <CourseCard
               imgSrc={LectureImg1}
@@ -50,14 +44,23 @@ const Home = () => {
               title={"4. Advanced CSS"}
               subtitle={"120+ Minutes"}
             />
+            <CourseCard
+              imgSrc={LectureImg5}
+              imgAlt={"Advanced CSS"}
+              title={"5. Version Control Systems"}
+              subtitle={"120+ Minutes"}
+            />
+            <CourseCard
+              imgSrc={LectureImg6}
+              imgAlt={"Advanced CSS"}
+              title={"6. Version Control Systems"}
+              subtitle={"120+ Minutes"}
+            />
           </Grid>
-        </Section>
-        <Section isHeadingVisible={false} modifiers={["testimonials"]}>
-          <Testimonial />
         </Section>
       </Main>
     </>
   );
 };
 
-export default Home;
+export default Courses;
