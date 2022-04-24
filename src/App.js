@@ -1,4 +1,7 @@
 import "./App.scss";
+import { Route, Routes } from "react-router-dom";
+
+// Pages
 import Home from "./pages/Home/Home";
 import Courses from "./pages/Courses/Courses";
 import Course from "./pages/Course/Course";
@@ -6,9 +9,11 @@ import Course from "./pages/Course/Course";
 function App() {
   return (
     <>
-      <Home />
-      <Courses />
-      <Course />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/Courses" element={<Courses />} />
+        <Route path="/Course" element={<Course />} />
+      </Routes>
     </>
   );
 }

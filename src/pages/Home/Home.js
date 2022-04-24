@@ -10,6 +10,7 @@ import LectureImg3 from "../../assets/images/lecture-3.jpg";
 import LectureImg4 from "../../assets/images/lecture-4.jpg";
 import CourseCard from "../../components/CourseCard/CourseCard";
 import Testimonial from "../../components/Testimonial/Testimonal";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
         <Section
           title={"Open new possibilites"}
           actionText={"Learn Something New"}
-          buttonText={"More Courses"}
+          buttonText={<Link to="/Courses">More Courses</Link>}
         >
           <Grid>
             <CourseCard

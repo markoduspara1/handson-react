@@ -1,7 +1,6 @@
 import "./Courses.scss";
 import React from "react";
 import Grid from "../../components/Grid/Grid";
-import Landing from "../../components/Landing/Landing";
 import Main from "../../components/Main/Main";
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
@@ -12,6 +11,7 @@ import LectureImg4 from "../../assets/images/lecture-4.jpg";
 import LectureImg5 from "../../assets/images/lecture-5.jpg";
 import LectureImg6 from "../../assets/images/lecture-6.jpg";
 import CourseCard from "../../components/CourseCard/CourseCard";
+import { Link } from "react-router-dom";
 
 const Courses = () => {
   return (
