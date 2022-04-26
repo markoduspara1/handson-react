@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=PT+Serif:wght@700&display=swap");
+
+//Fonts
+$fontPrimary: "Manrope", "sans-serif";
+$fontSecondary: "PT Serif", "serif";
+
+//Colors
+$colorPrimary: #bf3939ef;
+$colorSecondary: #ffffff;
+$colorBlack: #000000ad;
+$colorBgPrimary: #ffffff;
+$colorBgSecondary: #f6fafb;
+$colorTextPrimary: #333333;
+$colorTextSecondary: #696969;
+
+//Breakpoints
+$mobileLarge: 375px;
+$tabletSmall: 481px;
+$tablet: 768px;
+$desktop: 1024px;
+$dekstopLarge: 1300px;

@@ -1,5 +1,7 @@
+@import "../../theme.scss";
+
 .Single-Course {
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     gap: 50px;
@@ -12,14 +14,14 @@
     overflow: hidden;
     margin-bottom: 32px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
       width: 350px;
       height: 350px;
       margin-bottom: 0;
       flex-shrink: 0;
     }
 
-    @media (min-width: 1300px) {
+    @media (min-width: $dekstopLarge) {
       width: 450px;
       height: 450px;
     }
@@ -34,11 +36,11 @@
   & Text {
     font-size: 16px;
     line-height: 180%;
-    color: #333333;
-    @media (min-width: 768px) {
+    color: $colorTextPrimary;
+    @media (min-width: $tablet) {
       padding-left: 48px;
     }
-    @media (min-width: 1300px) {
+    @media (min-width: $dekstopLarge) {
       padding-left: 64px;
     }
   }

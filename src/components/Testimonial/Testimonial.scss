@@ -1,17 +1,19 @@
+@import "../../theme.scss";
+
 .Testimonial {
   display: grid;
   grid-template-rows: 40% 60%;
   row-gap: 15px;
 
-  @media (min-width: 481px) {
+  @media (min-width: $tabletSmall) {
     row-gap: 35px;
   }
 
-  @media (min-width: 481px) {
+  @media (min-width: $tablet) {
     row-gap: 45px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,7 +28,7 @@
     overflow: hidden;
     flex-shrink: 0;
 
-    @media (min-width: 1024px) {
+    @media (min-width: $desktop) {
       width: 350px;
       height: 350px;
     }
@@ -39,7 +41,7 @@
   }
 
   &-Content {
-    @media (min-width: 1024px) {
+    @media (min-width: $desktop) {
       padding-left: 120px;
     }
   }
@@ -49,7 +51,7 @@
     align-self: center;
     font-size: 30px;
     line-height: 180%;
-    color: #696969;
+    color: $colorTextSecondary;
   }
 
   &-Quotation {

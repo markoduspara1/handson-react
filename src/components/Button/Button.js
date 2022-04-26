@@ -1,6 +1,6 @@
 import "./Button.scss";
 
-const Button = ({ modifiers, children }) => {
+const Button = ({ modifiers, children, onClick }) => {
   const modifierClasses = {
     secondary: "Button_secondary",
     nav: "Button_nav",
@@ -13,7 +13,11 @@ const Button = ({ modifiers, children }) => {
 
   modifiers.map(modifier => (buttonClass += " " + modifierClasses[modifier]));
 
-  return <button className={buttonClass}>{children}</button>;
+  return (
+    <button onClick={onClick} className={buttonClass}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

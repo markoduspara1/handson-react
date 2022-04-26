@@ -10,9 +10,10 @@ import LectureImg3 from "../../assets/images/lecture-3.jpg";
 import LectureImg4 from "../../assets/images/lecture-4.jpg";
 import CourseCard from "../../components/CourseCard/CourseCard";
 import Testimonial from "../../components/Testimonial/Testimonal";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -24,7 +25,8 @@ const Home = () => {
         <Section
           title={"Open new possibilites"}
           actionText={"Learn Something New"}
-          buttonText={<Link to="/Courses">More Courses</Link>}
+          buttonText={"More Courses"}
+          buttonClickHandler={() => navigate("/Courses")}
         >
           <Grid>
             <CourseCard

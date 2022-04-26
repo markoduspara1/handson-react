@@ -9,6 +9,7 @@ const Section = ({
   buttonText,
   isHeadingVisible = true,
   children,
+  buttonClickHandler,
 }) => {
   const modifierClasses = {
     testimonials: "Section_testimonials",
@@ -30,7 +31,12 @@ const Section = ({
           <div className="Section-Heading">
             {title && <h2 className="Section-Title">{title}</h2>}
             {buttonText && (
-              <Button modifiers={["heading", "outline"]}>{buttonText}</Button>
+              <Button
+                onClick={buttonClickHandler}
+                modifiers={["heading", "outline"]}
+              >
+                {buttonText}
+              </Button>
             )}
           </div>
         )}

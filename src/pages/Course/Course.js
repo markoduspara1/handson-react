@@ -5,9 +5,10 @@ import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
 import LectureImg1 from "../../assets/images/lecture-1.jpg";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Courses = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -15,7 +16,8 @@ const Courses = () => {
         <Section
           title={"1. Introduction"}
           actionText={"120+ Minutes"}
-          buttonText={<Link to="">Back</Link>}
+          buttonText={"Back"}
+          buttonClickHandler={() => navigate(-1)}
         >
           <SingleCourse
             imgSrc={LectureImg1}
