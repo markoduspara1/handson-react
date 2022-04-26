@@ -1,15 +1,20 @@
+// Import-components
 import React from "react";
 import Grid from "../../components/Grid/Grid";
 import Header from "../../components/Header/Header";
 import Landing from "../../components/Landing/Landing";
 import Main from "../../components/Main/Main";
 import Section from "../../components/Section/Section";
+import CourseCard from "../../components/CourseCard/CourseCard";
+import Testimonial from "../../components/Testimonial/Testimonal";
+
+// Import-Images
 import LectureImg1 from "../../assets/images/lecture-1.jpg";
 import LectureImg2 from "../../assets/images/lecture-2.jpg";
 import LectureImg3 from "../../assets/images/lecture-3.jpg";
 import LectureImg4 from "../../assets/images/lecture-4.jpg";
-import CourseCard from "../../components/CourseCard/CourseCard";
-import Testimonial from "../../components/Testimonial/Testimonal";
+
+// Import-Router
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -17,6 +22,7 @@ const Home = () => {
   return (
     <>
       <Header />
+
       <Main>
         <section>
           <Landing />

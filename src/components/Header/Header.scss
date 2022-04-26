@@ -8,7 +8,7 @@
   z-index: 1;
   padding: 24px;
 
-  &.Header_secondary {
+  &-Secondary {
     background-color: $colorTextPrimary;
     position: initial;
   }
@@ -17,7 +17,7 @@
     width: 30px;
     height: auto;
 
-    @media (min-width: $desktop) {
+    @media screen and (#{$desktop}) {
       display: none;
     }
 
@@ -31,13 +31,13 @@
     justify-content: space-between;
     align-items: center;
 
-    @media (min-width: $desktop) {
+    @media screen and (#{$desktop}) {
       width: 960px;
       margin: 0 auto;
       padding: 32px 0;
     }
 
-    @media (min-width: $dekstopLarge) {
+    @media screen and (#{$desktopLarge}) {
       width: 1260px;
     }
   }
@@ -45,7 +45,7 @@
   &-Nav {
     display: none;
 
-    @media (min-width: $desktop) {
+    @media screen and (#{$desktop}) {
       display: block;
     }
   }

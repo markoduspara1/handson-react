@@ -12,7 +12,7 @@ const Section = ({
   buttonClickHandler,
 }) => {
   const modifierClasses = {
-    testimonials: "Section_testimonials",
+    testimonials: "Section-Testimonials",
   };
 
   let sectionClass = "Section";

@@ -52,19 +52,19 @@
 
   &-ContentInner {
     margin: 0 auto;
-    @media (min-width: $tabletSmall) {
+    @media screen and (#{$tabletSmall}) {
       width: 450px;
     }
 
-    @media (min-width: $tablet) {
+    @media screen and (#{$tablet}) {
       width: 550px;
     }
 
-    @media (min-width: $desktop) {
+    @media screen and (#{$desktop}) {
       width: 960px;
     }
 
-    @media (min-width: $dekstopLarge) {
+    @media screen and (#{$desktopLarge}) {
       width: 1280px;
     }
   }
@@ -75,21 +75,21 @@
     color: $colorBgPrimary;
     margin-bottom: 24px;
 
-    @media (min-width: $tabletSmall) {
+    @media screen and (#{$tabletSmall}) {
       width: 450px;
       font-size: 56px;
     }
   }
 
   &-Subtitle {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 180%;
     color: $colorBgPrimary;
     width: 300px;
     margin-bottom: 48px;
 
-    @media (min-width: $tabletSmall) {
-      font-size: 16;
+    @media screen and (#{$tabletSmall}) {
+      font-size: 18px;
     }
   }
 }

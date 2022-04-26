@@ -4,9 +4,21 @@ import LogoImg from "../../assets/images/logo.svg";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ modifiers }) => {
+  const modifierClasses = {
+    secondary: "Header-Secondary",
+  };
+
+  let HeaderClass = "Header";
+
+  if (modifiers) {
+    modifiers.map(modifier => {
+      HeaderClass += " " + modifierClasses[modifier];
+    });
+  }
+
   return (
-    <header className="Header">
+    <header className={HeaderClass}>
       <div className="Header-Inner">
         <Link to="/" className="Header-LogoLink">
           <img src={LogoImg} alt="Academy logo" className="Header-Logo" />

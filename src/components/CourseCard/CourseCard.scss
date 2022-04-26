@@ -23,23 +23,23 @@
     margin-bottom: 16px;
     transition: all 0.3s;
 
-    @media (min-width: $mobileLarge) {
+    @media screen and (#{$mobileLarge}) {
       height: 275px;
     }
 
-    @media (min-width: $tabletSmall) {
+    @media screen and (#{$tabletSmall}) {
       height: 200px;
     }
 
-    @media (min-width: $tablet) {
+    @media screen and (#{$tablet}) {
       height: 275px;
     }
 
-    @media (min-width: $desktop) {
+    @media screen and (#{$desktop}) {
       height: 230px;
     }
 
-    @media (min-width: $dekstopLarge) {
+    @media screen and (#{$desktopLarge}) {
       height: 255px;
     }
   }

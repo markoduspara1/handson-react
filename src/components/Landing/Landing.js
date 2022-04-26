@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Landing = () => {
   return (
     <div className="Landing">
-      <img className="Landing-Img" src={LandingImg} alt="landing image" />
+      <img className="Landing-Img" src={LandingImg} alt="landing" />
       <div className="Landing-Overlay">
         <div className="Landing-OverlayPrimary"></div>
         <div className="Landing-OverlaySecondary"></div>
