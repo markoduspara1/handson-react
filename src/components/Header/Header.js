@@ -37,9 +37,6 @@ const Header = ({ modifiers }) => {
           />
         </svg>
         <nav className="Header-Nav">
-          {/* <Link to="/Courses" className="Header-NavLink">
-            Courses
-          </Link>  */}
           <NavLink
             to="/Courses"
             className="Header-NavLink"
