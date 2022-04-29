@@ -14,6 +14,8 @@ import LectureImg3 from "../../assets/images/lecture-3.jpg";
 import LectureImg4 from "../../assets/images/lecture-4.jpg";
 import LectureImg5 from "../../assets/images/lecture-5.jpg";
 import LectureImg6 from "../../assets/images/lecture-6.jpg";
+import LectureImg7 from "../../assets/images/lecture-7.jpg";
+import LectureImg8 from "../../assets/images/lecture-8.jpg";
 
 const Courses = () => {
   return (
@@ -56,6 +58,18 @@ const Courses = () => {
               imgSrc={LectureImg6}
               imgAlt={"Advanced CSS"}
               title={"6. Version Control Systems"}
+              subtitle={"120+ Minutes"}
+            />
+            <CourseCard
+              imgSrc={LectureImg7}
+              imgAlt={"Advanced CSS"}
+              title={"7. Version Control Systems"}
+              subtitle={"120+ Minutes"}
+            />
+            <CourseCard
+              imgSrc={LectureImg8}
+              imgAlt={"Advanced CSS"}
+              title={"8. Version Control Systems"}
               subtitle={"120+ Minutes"}
             />
           </Grid>
