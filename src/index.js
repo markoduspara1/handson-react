@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 // Import-Router
 import { BrowserRouter as Router } from "react-router-dom";
 
-// Import- ScrolltoTop
+// Import-ScrolltoTop
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
