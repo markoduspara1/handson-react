@@ -51,25 +51,25 @@ const Courses = () => {
             <CourseCard
               imgSrc={LectureImg5}
               imgAlt={"Advanced CSS"}
-              title={"5. Version Control Systems"}
+              title={"5. JavaScript Basics"}
               subtitle={"120+ Minutes"}
             />
             <CourseCard
               imgSrc={LectureImg6}
               imgAlt={"Advanced CSS"}
-              title={"6. Version Control Systems"}
+              title={"6. Advanced JavaScript"}
               subtitle={"120+ Minutes"}
             />
             <CourseCard
               imgSrc={LectureImg7}
               imgAlt={"Advanced CSS"}
-              title={"7. Version Control Systems"}
+              title={"7. Intro to React"}
               subtitle={"120+ Minutes"}
             />
             <CourseCard
               imgSrc={LectureImg8}
               imgAlt={"Advanced CSS"}
-              title={"8. Version Control Systems"}
+              title={"8. React events & conditionals"}
               subtitle={"120+ Minutes"}
             />
           </Grid>
