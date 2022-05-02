@@ -1,13 +1,19 @@
 import React from "react";
-import "./SingleCourse.scss";
+
+import {
+  SingleCourse as SingleCourseWrapper,
+  Figure,
+  SingleCourseImg,
+  Text,
+} from "./SingleCourseStyle";
 
 const SingleCourse = ({ imgSrc, imgAlt }) => {
   return (
-    <div className="SingleCourse">
-      <figure className="SingleCourse-Figure">
-        <img src={imgSrc} alt={imgAlt} className="SingleCourse-Img" />
-      </figure>
-      <p className="SingleCourse-Text">
+    <SingleCourseWrapper>
+      <Figure>
+        <SingleCourseImg src={imgSrc} alt={imgAlt} />
+      </Figure>
+      <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Et tortor at risus
         viverra adipiscing at in tellus. Pellentesque habitant morbi tristique
@@ -28,8 +34,8 @@ const SingleCourse = ({ imgSrc, imgAlt }) => {
         elementum tempus egestas sed sed risus pretium quam. Vel risus commodo
         viverra maecenas accumsan. Sit amet risus nullam eget felis eget.
         Aliquet enim tortor at auctor urna nunc id.
-      </p>
-    </div>
+      </Text>
+    </SingleCourseWrapper>
   );
 };
 

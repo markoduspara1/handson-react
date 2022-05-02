@@ -1,34 +1,52 @@
+import React, { useState, useEffect } from "react";
+import coursesMock from "../../lib/mock/courses";
+
 // Import-components
 import "./Course.scss";
-import React from "react";
 import Main from "../../components/Main/Main";
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
 import SingleCourse from "../../components/SingleCourse/SingleCourse";
 
-// Import-Images
-import LectureImg1 from "../../assets/images/lecture-1.jpg";
-
 // Import-Router
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const Courses = () => {
+const Course = () => {
+  const { id } = useParams();
+  const [courses, setCourses] = useState(null);
+  const [course, setCourse] = useState(null);
+
+  useEffect(() => {
+    setCourses(coursesMock);
+  }, []);
+
+  useEffect(() => {
+    courses &&
+      setCourse(...courses.filter(course => course.id === parseInt(id)));
+  }, [courses, id]);
+
   const navigate = useNavigate();
   return (
     <>
-      <Header modifiers={["secondary"]} />
+      <Header isSecondary={true} />
       <Main>
-        <Section
-          title={"1. Introduction"}
-          actionText={"120+ Minutes"}
-          buttonText={"Back"}
-          buttonClickHandler={() => navigate(-1)}
-        >
-          <SingleCourse imgSrc={LectureImg1} imgAlt={"Single-CourseImg"} />
-        </Section>
+        {course && (
+          <Section
+            title={course.title}
+            actionText={course.subtitle}
+            buttonText={"Back"}
+            buttonClickHandler={() => navigate(-1)}
+          >
+            <SingleCourse
+              imgSrc={course.imgSrc}
+              imgAlt={course.imgalt}
+              text={course.text}
+            />
+          </Section>
+        )}
       </Main>
     </>
   );
 };
 
-export default Courses;
+export default Course;
