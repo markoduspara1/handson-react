@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import coursesMock from "../../lib/mock/courses";
 
-// Import-components
+//Import-components
 import Main from "../../components/Main/Main";
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
 import CourseCard from "../../components/CourseCard/CourseCard";
+import Search from "../../components/SearchBar/SearchBar";
 import { Grid } from "../../lib/style/generalStyles";
 
 const Courses = () => {
@@ -22,7 +23,7 @@ const Courses = () => {
     <>
       <Header isSecondary={true} />
       <Main>
-        <Section title={"All Lectures"} actionText={"Learn Something New"}>
+        <Section title={"All Lectures"} SearchBar>
           {courses && (
             <Grid>
               {courses.map(

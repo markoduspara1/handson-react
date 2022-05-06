@@ -12,7 +12,7 @@ export const Section = styled.section`
     props.isTestimonials &&
     `
     background-color: ${colors.bgSecondary};
-  `}
+    `}
 `;
 
 export const Inner = styled.div`

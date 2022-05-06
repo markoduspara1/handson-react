@@ -34,8 +34,11 @@ const Course = () => {
           <Section
             title={course.title}
             actionText={course.subtitle}
-            buttonText={"Back"}
-            buttonClickHandler={() => navigate(-1)}
+            buttonProps={{
+              buttonText: "Back",
+              buttonStyle: ["heading", "outline"],
+              buttonClickHandler: () => navigate(-1),
+            }}
           >
             <SingleCourse
               imgSrc={course.imgSrc}

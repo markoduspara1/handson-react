@@ -30,7 +30,7 @@ const Landing = () => {
             with knowledge-based lessons from IT practice.
           </Subtitle>
           <ButtonLink to="/Courses">
-            <Button modifiers={["landing"]}>Explore Courses</Button>
+            <Button buttonStyle={["landing"]}>Explore Courses</Button>
           </ButtonLink>
         </Inner>
       </Content>
