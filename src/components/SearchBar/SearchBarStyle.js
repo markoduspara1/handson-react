@@ -1,23 +1,22 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { colors, breakpoints } from "../../lib/style/theme";
 
 export const Search = styled.div`
   position: relative;
   width: 360px;
   height: 48px;
-  background: blue;
   border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 5px;
   transition: all 0.3s ease;
+  z-index: 0;
 `;
 
 export const SearchInput = styled.input`
   padding-left: 48px;
-  border: none;
+  border-radius: 6px;
   position: absolute;
   top: 0;
   left: 0;
@@ -26,9 +25,9 @@ export const SearchInput = styled.input`
   background: transparent;
   outline: none;
   font-size: 16px;
-  border: 1px solid transparent;
+  border: 1px solid ${colors.textSecondary};
 
   &:focus {
-    border-color: tgba(0, 0, 0, 0.3);
+    border-color: ${colors.textPrimary};
   }
 `;
