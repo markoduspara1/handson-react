@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "../Button/Button";
-import "./Section.scss";
 import Search from "../SearchBar/SearchBar";
 
 import {

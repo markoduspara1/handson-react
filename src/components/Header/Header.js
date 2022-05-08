@@ -39,7 +39,7 @@ const Header = ({ isSecondary }) => {
           >
             Courses
           </HeaderNavLink>
-          <ButtonLink to="/Sign-in">
+          <ButtonLink to="/SignIn">
             <Button buttonStyle={["nav"]}>Sign in</Button>
           </ButtonLink>
           <ButtonLink to="/Register">

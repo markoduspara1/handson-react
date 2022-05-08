@@ -59,6 +59,22 @@ export const Title = styled.h2`
   }
 `;
 
+// const TitleStyle = css`
+//   color: ${colors.textPrimary};
+//   font-size: 26px;
+//   font-weight: 500;
+//   margin-bottom: 32px;
+
+//   @media screen and (${breakpoints.tablet}) {
+//     font-size: 32px;
+//     margin-bottom: 0;
+//   }
+
+//   @media screen and (${breakpoints.desktop}) {
+//     font-size: 36px;
+//   }
+// `;
+
 // .Section {
 //   padding: 60px 24px;
 
