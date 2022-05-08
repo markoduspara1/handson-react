@@ -15,13 +15,7 @@ const SearchBar = () => {
         ) {
           return val;
         }
-      }).map((val, key) => {
-        return (
-          <div>
-            <p>{val.title}</p>
-          </div>
-        );
-      })}
+      }).map((val, key) => {})}
       <SearchInput
         placeholder="Search Courses"
         onChange={e => setSearchterm(e.target.value)}
