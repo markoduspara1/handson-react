@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export const Menu = styled.nav`
   width: 100%;
+  z-index: 1;
 
   @media screen and (${breakpoints.mobileLarge}) {
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
