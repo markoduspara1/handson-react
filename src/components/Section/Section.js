@@ -7,7 +7,8 @@ import {
   Inner,
   ActionText,
   Heading,
-  Title,
+  SectionTitleH1,
+  SectionTitleH2,
 } from "./SectionStyle";
 
 const Section = ({
@@ -18,6 +19,8 @@ const Section = ({
   children,
   buttonProps,
   SearchBar,
+  isMainSection = false,
+  isCentered = false,
 }) => {
   return (
     <SectionWrapper isTestimonials={isTestimonials}>
@@ -25,7 +28,12 @@ const Section = ({
         {actionText && <ActionText>{actionText}</ActionText>}
         {isHeadingVisible && (
           <Heading>
-            {title && <Title>{title}</Title>}
+            {title &&
+              (isMainSection ? (
+                <SectionTitleH1 isCentered={isCentered}>{title}</SectionTitleH1>
+              ) : (
+                <SectionTitleH2 isCentered={isCentered}>{title}</SectionTitleH2>
+              ))}
             {SearchBar && <Search>{SearchBar}</Search>}
             {buttonProps && (
               <Button

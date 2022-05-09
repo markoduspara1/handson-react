@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { breakpoints, colors, fonts } from "../../lib/style/theme";
-// import {
-//   Form as FormFormik,
-//   Field as FieldFormik,
-//   ErrorMessage as ErrorMessageFormik,
-// } from "formik";
+import {
+  Form as FormFormik,
+  Field as FieldFormik,
+  ErrorMessage as ErrorMessageFormik,
+} from "formik";
+import { css } from "styled-components";
 
 export const Grid = styled.div`
   display: grid;
@@ -26,7 +27,7 @@ export const Grid = styled.div`
   }
 `;
 
-export const Form = styled(Form)``;
+export const Form = styled(FormFormik)``;
 
 export const FormRow = styled.div`
   margin-bottom: 32px;
@@ -56,7 +57,7 @@ const FieldStyle = css`
   }
 `;
 
-export const Selector = styled.select`
+export const Select = styled.select`
   ${FieldStyle}
 `;
 

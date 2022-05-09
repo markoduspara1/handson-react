@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors, breakpoints } from "../../lib/style/theme";
+import { css } from "styled-components";
 
 export const Section = styled.section`
   padding: 60px 24px;
@@ -43,7 +44,7 @@ export const Heading = styled.div`
   }
 `;
 
-export const Title = styled.h2`
+const TitleStyle = css`
   color: ${colors.textPrimary};
   font-size: 26px;
   font-weight: 500;
@@ -59,74 +60,77 @@ export const Title = styled.h2`
   }
 `;
 
-// const TitleStyle = css`
-//   color: ${colors.textPrimary};
-//   font-size: 26px;
-//   font-weight: 500;
-//   margin-bottom: 32px;
+export const SectionTitleH1 = styled.h2`
+  ${TitleStyle}
 
-//   @media screen and (${breakpoints.tablet}) {
-//     font-size: 32px;
-//     margin-bottom: 0;
-//   }
+  ${props =>
+    props.isCentered &&
+    `
+    text-align: center; 
+    width: 100%;`}
+`;
 
-//   @media screen and (${breakpoints.desktop}) {
-//     font-size: 36px;
-//   }
-// `;
+export const SectionTitleH2 = styled.h2`
+  ${TitleStyle}
 
-// .Section {
-//   padding: 60px 24px;
+  ${props =>
+    props.isCentered &&
+    `
+    text-align: center; 
+    width: 100%;`}
+`;
 
-//   @media screen and (#{$desktop}) {
-//     padding: 120px 0;
-//   }
+//  .Section {
+//    padding: 60px 24px;
 
-//   &-Testimonials {
-//     background-color: $colorBgSecondary;
-//   }
+//    @media screen and (#{$desktop}) {
+//      padding: 120px 0;
+//    }
 
-//   &-Inner {
-//     @media screen and (#{$desktop}) {
-//       width: 960px;
-//       margin: 0 auto;
-//     }
+//    &-Testimonials {
+//      background-color: $colorBgSecondary;
+//    }
 
-//     @media screen and (#{$desktopLarge}) {
-//       width: 1260px;
-//     }
-//   }
+//    &-Inner {
+//      @media screen and (#{$desktop}) {
+//        width: 960px;
+//        margin: 0 auto;
+//      }
 
-//   &-ActionText {
-//     display: block;
-//     color: $colorPrimary;
-//     font-weight: 500;
-//     margin-bottom: 24px;
-//   }
+//      @media screen and (#{$desktopLarge}) {
+//        width: 1260px;
+//      }
+//    }
 
-//   &-Heading {
-//     margin-bottom: 64px;
+//    &-ActionText {
+//      display: block;
+//      color: $colorPrimary;
+//      font-weight: 500;
+//      margin-bottom: 24px;
+//    }
 
-//     @media screen and (#{$tablet}) {
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//     }
-//   }
+//    &-Heading {
+//      margin-bottom: 64px;
 
-//   &-Title {
-//     color: $colorTextPrimary;
-//     font-size: 26px;
-//     font-weight: 500;
-//     margin-bottom: 32px;
+//      @media screen and (#{$tablet}) {
+//        display: flex;
+//        justify-content: space-between;
+//        align-items: center;
+//      }
+//    }
 
-//     @media screen and (#{$tablet}) {
-//       font-size: 32px;
-//       margin-bottom: 0;
-//     }
+//    &-Title {
+//      color: $colorTextPrimary;
+//      font-size: 26px;
+//      font-weight: 500;
+//      margin-bottom: 32px;
 
-//     @media screen and (#{$desktop}) {
-//       font-size: 36px;
-//     }
-//   }
-// }
+//      @media screen and (#{$tablet}) {
+//        font-size: 32px;
+//        margin-bottom: 0;
+//      }
+
+//      @media screen and (#{$desktop}) {
+//        font-size: 36px;
+//      }
+//    }
