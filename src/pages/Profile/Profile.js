@@ -1,3 +1,5 @@
+import React from "react";
+
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
 import Button from "../../components/Button/Button";
@@ -14,11 +16,18 @@ import {
 import { Formik } from "formik";
 import * as Yup from "yup";
 
-const Register = () => {
+const Profile = () => {
   return (
     <>
       <Header isSecondary />
-      <Section title={"Register"} isMainSection isCentered>
+      <Section
+        title={"My profile"}
+        buttonProps={{
+          buttonText: "Edit",
+          buttonStyle: ["heading", "outline"],
+        }}
+        isMainSection
+      >
         <Formik
           initialValues={{
             firstName: "",
@@ -74,7 +83,7 @@ const Register = () => {
           }}
         >
           {formik => (
-            <Form>
+            <Form isCentered>
               <FormRow>
                 <Field
                   placeholder="First name ..."
@@ -171,4 +180,4 @@ const Register = () => {
     </>
   );
 };
-export default Register;
+export default Profile;

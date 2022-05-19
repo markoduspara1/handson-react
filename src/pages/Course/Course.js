@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import coursesMock from "../../lib/mock/courses";
 
 // Import-components
-import "./Course.scss";
+
 import Main from "../../components/Main/Main";
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
