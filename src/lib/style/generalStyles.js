@@ -27,8 +27,6 @@ export const Grid = styled.div`
   }
 `;
 
-export const Form = styled(FormFormik)``;
-
 export const FormRow = styled.div`
   margin-bottom: 32px;
 
@@ -71,4 +69,16 @@ export const ErrorMessage = styled(ErrorMessageFormik)`
   font-size: 14px;
   color: ${colors.primary};
   padding-top: 8px;
+`;
+
+export const Form = styled(FormFormik)`
+  @media (${breakpoints.tabletSmall}) {
+    width: 400px;
+
+    ${props =>
+      props.isCentered !== true &&
+      `
+            margin: 0 auto;
+        `}
+  }
 `;

@@ -6,7 +6,7 @@ const Menu = ({ open }) => {
   return (
     <MenuStyled open={open}>
       <MenuLink to="/Courses">Courses</MenuLink>
-      <MenuLink to="/Sign-in">Sign In</MenuLink>
+      <MenuLink to="/Signin">Sign In</MenuLink>
       <MenuLink to="/Register">Register</MenuLink>
     </MenuStyled>
   );

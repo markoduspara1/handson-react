@@ -39,6 +39,12 @@ const Header = ({ isSecondary }) => {
           >
             Courses
           </HeaderNavLink>
+          <HeaderNavLink
+            style={({ isActive }) => (isActive ? "#ffffff" : "#bf3939ef")}
+            to="/Profile"
+          >
+            Profile
+          </HeaderNavLink>
           <ButtonLink to="/SignIn">
             <Button buttonStyle={["nav"]}>Sign in</Button>
           </ButtonLink>

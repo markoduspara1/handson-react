@@ -38,6 +38,12 @@ export const Button = styled.button`
         if (modifier === "outline") {
           styling += `
           border: 1px solid ${colors.primary};
+
+          &: hover{
+            background-color: ${colors.primary};
+            color: ${colors.secondary};
+          }
+
         `;
         }
         if (modifier === "heading") {
@@ -51,24 +57,14 @@ export const Button = styled.button`
           width: 220px;
         `;
         }
+        if (modifier === "form") {
+          styling += ` 
+          display:block;
+          margin: 0 auto;
+          width: 220px;
+        `;
+        }
       });
     return styling;
   }}
 `;
-
-/* ${props =>
-    props.buttonStyle === "secondary" &&
-    ` background: ${colors.primary};
-      color: ${colors.bgPrimary};`}
-
-  ${props =>
-    props.buttonStyle === "nav" &&
-    ` width: 150px;
-    background-color: blue;
-
-    &:hover {filter: drop-shadow(0 3px 3px), ${colors.black} ;}`}  
-
-${props =>
-    props.buttonStyle === "outline" && ` border: 1px solid ${colors.primary};`}
-
-${props => props.buttonStyle === "outline" && ` width: 200px;`} */
