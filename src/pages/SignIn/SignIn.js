@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { getAllUser, loginUser } from "../../api/users";
 
 import Header from "../../components/Header/Header";
 import Section from "../../components/Section/Section";
@@ -9,12 +10,14 @@ import {
   FormRow,
   Field,
   ErrorMessage,
+  FormSuccessMessage,
 } from "../../lib/style/generalStyles";
 
 import { Formik } from "formik";
 import * as Yup from "yup";
 
 const Signin = () => {
+  const [successMessage, setSuccessMessage] = useState(null);
   return (
     <>
       <Header isSecondary />
@@ -23,7 +26,6 @@ const Signin = () => {
           initialValues={{
             email: "",
             password: "",
-            isAdmin: false,
           }}
           validationSchema={Yup.object({
             email: Yup.string()
@@ -31,20 +33,49 @@ const Signin = () => {
               .required("Email is required"),
             password: Yup.string().required("Password is required"),
           })}
-          onSubmit={(values, actions) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+          onSubmit={async (values, actions) => {
+            try {
+              const res = await loginUser(values);
+              const users = await getAllUser(res.access_Token);
+              const user = users.find(user => user.email === values.email);
+
+              localStorage.setItem("accessToken", res.access_Token);
+
               actions.setSubmitting(false);
               actions.resetForm({
                 email: "",
                 password: "",
-                isAdmin: false,
               });
-            }, 1000);
+
+              setSuccessMessage({
+                error: false,
+                message: `Hi ${
+                  user.first_name + " " + user.last_name
+                }, login was successfull.`,
+              });
+
+              setTimeout(() => {
+                setSuccessMessage(null);
+              }, 3000);
+            } catch (err) {
+              setSuccessMessage({
+                error: true,
+                message: "User registration unsuccessfull",
+              });
+
+              actions.setSubmitting(false);
+            }
           }}
         >
           {formik => (
             <Form>
+              {successMessage && (
+                <FormRow>
+                  <FormSuccessMessage isError={successMessage.error}>
+                    {successMessage.error}
+                  </FormSuccessMessage>
+                </FormRow>
+              )}
               <FormRow>
                 <Field
                   placeholder="Email ..."
